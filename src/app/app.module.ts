@@ -9,8 +9,12 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { ProdutoComponent } from './produto/produto.component';
 import { ItemComponent } from './item/item.component';
+=======
+import { CategoriaComponent } from './categoria/categoria.component';
+>>>>>>> 9e29fafd33e94cf8255ba48c1da52346a561c3e2
 
 @NgModule({
   declarations: [
@@ -19,8 +23,12 @@ import { ItemComponent } from './item/item.component';
     RodapeComponent,
     LoginComponent,
     CadastroComponent,
+<<<<<<< HEAD
     ProdutoComponent,
     ItemComponent
+=======
+    CategoriaComponent
+>>>>>>> 9e29fafd33e94cf8255ba48c1da52346a561c3e2
   ],
   imports: [
     BrowserModule,
