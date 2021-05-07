@@ -8,6 +8,7 @@ h1, h2, h3, h4, p {
 .menu-bg{
   background-color: rgba(236, 241, 235, 0.507);
 }
+
 .carrocel {
   text-align: center;
 
@@ -26,7 +27,7 @@ h1, h2, h3, h4, p {
   position: relative;
 }
 
-.teste {
+.video {
   width: 100%;
   height: auto;
 
@@ -34,11 +35,35 @@ h1, h2, h3, h4, p {
 
 }
 
-.carrocel {
+.carousel-texto {
   font-family: 'Vollkorn', serif !important;
-  font-weight: 700;
 
-  color: var(--text-menu);
+}
+
+.carousel-texto h1 {
+  font-family: 'Vollkorn', serif !important;
+  font-weight: 700 !important;
+  font-size: 4rem !important;
+
+  color: var(--text-menu) !important;
+
+}
+
+.carousel-texto h3 {
+  font-family: 'Vollkorn', serif !important;
+  font-weight: 600 !important;
+  font-size: 2.5rem !important;
+
+  color: var(--text-menu) !important;
+
+}
+
+.carousel-texto p {
+  font-family: 'Lato', sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 1rem !important;
+
+  color: var(--text-menu) !important;
 
 }
 
@@ -165,7 +190,7 @@ h1, h2, h3, h4, p {
   height: auto;
 
   background-color: var(--background-section);
-  background-image: linear-gradient(var(--background-desenvolvedores), var(--background-section));
+  background-image: linear-gradient(var(--background-section), var(--background-desenvolvedores), var(--background-section));
 
 }
 
@@ -505,5 +530,212 @@ h1, h2, h3, h4, p {
   font-size: 0.8rem !important;
 
   text-align: center;
+
+}
+
+/* REPONSIVIDADE APARTIR DE 600px */
+@media(max-width: 600px) {
+  .pelicula{
+    width: 100%;
+    height: 40vh;
+
+    background-color: #F9F9F490 !important;
+
+    position: relative;
+
+  }
+
+  .slide {
+    width: 100% !important;
+    height: 100% !important;
+
+  }
+
+  .carousel-texto h1 {
+    font-family: 'Vollkorn', serif !important;
+    font-weight: 700 !important;
+    font-size: 1.7rem !important;
+
+    color: var(--text-default) !important;
+
+  }
+
+  .carousel-texto h3 {
+    font-family: 'Vollkorn', serif !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+
+    color: var(--text-default) !important;
+
+  }
+
+  .carousel-texto p {
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 0.5rem !important;
+
+    color: var(--text-default) !important;
+
+  }
+
+  .sobreNos .swot {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex-wrap: wrap;
+
+    padding: 2%;
+
+  }
+
+  .sobreNos .swot .opcao {
+    width: 100% !important;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .sobreNos .swot .opcao i {
+    padding: 5%;
+
+    background-color: var(--icon-background);
+
+    color: var(--icon);
+
+    border-radius: 50%;
+
+    box-shadow: 0px 3px 5px -3px var(--icon);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+  }
+
+  .sobreNos .swot .opcao .conteudo {
+    padding: 10%;
+
+    width: 100%;
+    height: auto;
+
+    text-align: center;
+
+  }
+
+  .sobreNos .swot .opcao .conteudo h2, p {
+    color: var(--text-default) !important;
+
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    text-align: center;
+
+  }
+
+  .sobreNos .swot .opcao .conteudo h2 {
+    font-size: 1.1rem !important;
+    font-family: 'Oxygen', sans-serif !important;
+    font-weight: 700 !important;
+
+  }
+
+  .sobreNos .swot .opcao .conteudo p {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+
+    color: var(--text-default);
+
+    text-align: center;
+
+  }
+
+  .atuacao .habilidades .itens .bloco {
+    margin: 2%;
+    padding: 4%;
+
+    width: 80%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 1px solid var(--border-gray);
+    border-radius: 10px;
+
+    box-shadow: 0px 3px 5px -3px var(--icon);
+
+  }
+
+  .atuacao .habilidades .itens .bloco i {
+    padding: 5%;
+
+    background-color: var(--icon-background);
+
+    color: var(--icon);
+
+    border-radius: 50%;
+
+    box-shadow: 0px 3px 5px -3px var(--icon);
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .atuacao .habilidades .itens .bloco h2 {
+    margin-top: 10% !important;
+
+    width: 100%;
+    height: auto;
+
+    text-align: center;
+
+    color: var(--text-default) !important;
+
+    font-size: 1.1rem !important;
+
+  }
+
+  .atuacao .habilidades .itens .bloco p {
+    width: 80%;
+    height: auto;
+
+    text-align: center;
+
+    font-size: 1rem !important;
+
+    color: var(--text-default) !important;
+
+  }
+
+  .atuacao .desenvolvedores .colaboradores .carde .perfil {
+    margin-top: 10%;
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
 
 }
