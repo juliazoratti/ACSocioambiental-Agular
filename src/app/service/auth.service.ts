@@ -9,7 +9,7 @@ import { UserLogin } from '../model/UserLogin';
   providedIn: 'root'
 })
 export class AuthService {
-url = environment.caminho + environment.port
+  url = environment.caminho + environment.port
 
   constructor(
     private http: HttpClient
