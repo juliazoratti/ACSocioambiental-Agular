@@ -24,7 +24,6 @@ url = environment.caminho + environment.port
     return this.http.post<User>(`${this.url}/usuarios/cadastrar`,user)
 
   }
-<<<<<<< HEAD
 
   logado (){
     let ok: boolean = false
@@ -35,6 +34,5 @@ url = environment.caminho + environment.port
 
     return ok
   }
-=======
->>>>>>> 25a5be65b683d82adc12e107ef977d77ae0abd52
+
 }
