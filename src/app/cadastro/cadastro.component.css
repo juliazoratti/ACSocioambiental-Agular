@@ -15,19 +15,8 @@ form {
 }
 
 #background{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     background-image: url('https://i.imgur.com/bb9JVPq.jpg');
-=======
-    background-image: url('https://i.imgur.com/bb9JVPq.jpeg');
->>>>>>> 501af60fee201f9b3ee7db5823cfe6521894edb4
-=======
-    background-image: url('https://i.imgur.com/bb9JVPq.jpeg');
->>>>>>> 25a5be65b683d82adc12e107ef977d77ae0abd52
-=======
-    background-image: url('https://i.imgur.com/bb9JVPq.jpeg');
->>>>>>> 25a5be65b683d82adc12e107ef977d77ae0abd52
+
     min-height: 695px;
     background-position: center;
     background-repeat: no-repeat;
