@@ -24,4 +24,14 @@ url = environment.caminho + environment.port
     return this.http.post<User>(`${this.url}/usuarios/cadastrar`,user)
 
   }
+
+  logado (){
+    let ok: boolean = false
+
+    if(environment.token != ''){
+      ok = true
+    }
+
+    return ok
+  }
 }
