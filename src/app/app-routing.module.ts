@@ -7,7 +7,6 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { LoginComponent } from './login/login.component';
 import { ItemComponent } from './item/item.component';
 
-import { MenuComponent } from './menu/menu.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { CadastarProdutoComponent } from './cadastar-produto/cadastar-produto.component';
 import { DeletarProdutoComponent } from './deletar-produto/deletar-produto.component';
@@ -22,7 +21,8 @@ const routes: Routes = [
   {path: 'item', component: ItemComponent},
   {path: 'sobre', component: SobreComponent},
   {path: 'cadastar-produto/:id', component: CadastarProdutoComponent},
-  {path: 'deletar-produto/:id', component: DeletarProdutoComponent}
+  {path: 'deletar-produto/:id', component: DeletarProdutoComponent},
+  {path: 'produtos', component: ProdutoComponent}
 
 ];
 
