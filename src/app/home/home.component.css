@@ -23,7 +23,7 @@ h1, h2, h3, h4, p {
   height: 116vh;
 
   /*background-color: var(--overlay) !important;*/
-  background-image: linear-gradient(#0c379660 60%, var(--background-section));  /*3b5998*/
+  background-image: linear-gradient(#282c4ea0 60%, var(--background-section));  /*3b5998*/
 
   position: relative;
 }
