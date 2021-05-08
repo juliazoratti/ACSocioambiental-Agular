@@ -22,7 +22,9 @@ const routes: Routes = [
   {path: 'item', component: ItemComponent},
   {path: 'sobre', component: SobreComponent},
   {path: 'cadastar-produto/:id', component: CadastarProdutoComponent},
-  {path: 'deletar-produto/:id', component: DeletarProdutoComponent}
+  {path: 'deletar-produto/:id', component: DeletarProdutoComponent},
+  {path: 'produtos', component: ProdutoComponent}
+
 
 ];
 
