@@ -28,7 +28,7 @@
   width: 100%;
   height: auto;
 
-  position: absolute;
+  position: relative;
 
   background-color: transparent;
 
@@ -43,7 +43,7 @@
 .nav-link {
   font-weight: 400 !important;
 
-  color: var(--text-menu) !important;
+  color: var(--text-default) !important;
 
 }
 

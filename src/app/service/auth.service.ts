@@ -35,4 +35,12 @@ export class AuthService {
     return ok
   }
 
+  ajusteMenu() {
+    if(window.document.URL != '/home') {
+      window.document.querySelector('..navbar-light')?.setAttribute('style', 'position: relative !important;')
+
+    }
+
+  }
+
 }
