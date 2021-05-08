@@ -16,6 +16,7 @@ import { ItemComponent } from './item/item.component';
 import { CadastarProdutoComponent } from './cadastar-produto/cadastar-produto.component';
 import { DeletarProdutoComponent } from './deletar-produto/deletar-produto.component';
 
+import { SobreComponent } from './sobre/sobre.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DeletarProdutoComponent } from './deletar-produto/deletar-produto.compo
     ItemComponent,
     CadastarProdutoComponent,
     DeletarProdutoComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,
