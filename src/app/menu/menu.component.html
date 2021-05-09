@@ -1,24 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse " id="conteudoNavbarSuportado">
-        <div>
-            <img src="../../assets/img/logo.png" width="60px" height="80px" alt="">
+        <div class="img">
+            <img src="../../assets/img/logo.png" alt="">
         </div>
         <ul class="navbar-nav mr-auto">
-
             <li class="nav-item  active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+                <a class="nav-link" routerLink='/home' >Home <span class="sr-only">(página atual)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sobre nós</a>
+                <a class="nav-link" routerLink='/sobre' >Sobre nós</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
+                <a class="nav-link" routerLink='/contatos' >Contato</a>
             </li>
             <li class="nav-item">
 
@@ -30,8 +28,9 @@
                     Produtos
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Meio Ambiente</a>
-                    <a class="dropdown-item" href="#">Ajuda Social</a>
+                    <a class="dropdown-item" routerLink='/categoria' >Meio Ambiente</a>
+                    <a class="dropdown-item" routerLink='/item' >Ajuda Social</a>
+                    <a class="dropdown-item" routerLink='/produtos' >Todos Produtos</a>
                   </div>
                 </div>
             </li>

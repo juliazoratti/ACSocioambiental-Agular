@@ -22,7 +22,8 @@ h1, h2, h3, h4, p {
   width: 100%;
   height: 116vh;
 
-  background-color: var(--overlay) !important;
+  /*background-color: var(--overlay) !important;*/
+  background-image: linear-gradient(#282c4ea0 60%, var(--background-section));  /*3b5998*/
 
   position: relative;
 }
@@ -69,6 +70,17 @@ h1, h2, h3, h4, p {
 
 /* SECTION / CONTEUDO */
 .sobreNos {
+  /*padding: 0% 3%;*/
+
+  width: 100% !important;
+  height: auto;
+
+  /*background-color: var(--background-section);
+  background-image: linear-gradient(var(--overlay) 5%, var(--background-section) 95%);*/
+
+}
+
+.background-section {
   padding: 0% 3%;
 
   width: 100%;
@@ -84,8 +96,6 @@ h1, h2, h3, h4, p {
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: 20%;
-
-  background-color: var(--background-section);
 
 }
 

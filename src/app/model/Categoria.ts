@@ -5,6 +5,7 @@ export class Categoria{
   public descricao:string
   //public produto:Produto[]
 
+<<<<<<< HEAD
 
 
 }
@@ -28,3 +29,6 @@ export class Categoria{
 	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("categoria")
 	private List<Produto> produto; */
+=======
+}
+>>>>>>> 026528bf6808c13a9dbe20ab604249d91901932d

@@ -15,7 +15,17 @@ import { CadastarProdutoComponent } from './cadastar-produto/cadastar-produto.co
 import { DeletarProdutoComponent } from './deletar-produto/deletar-produto.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { HomeComponent } from './home/home.component';
+<<<<<<< HEAD
 import { AtualizarProdutoComponent } from './atualizar-produto/atualizar-produto.component';
+=======
+import { CategoriaComponent } from './categoria/categoria.component';
+import { ProdutoComponent } from './produto/produto.component';
+import { ItemComponent } from './item/item.component';
+import { CadastarProdutoComponent } from './cadastar-produto/cadastar-produto.component';
+import { DeletarProdutoComponent } from './deletar-produto/deletar-produto.component';
+
+import { SobreComponent } from './sobre/sobre.component';
+>>>>>>> 026528bf6808c13a9dbe20ab604249d91901932d
 
 @NgModule({
   declarations: [
@@ -24,14 +34,22 @@ import { AtualizarProdutoComponent } from './atualizar-produto/atualizar-produto
     RodapeComponent,
     LoginComponent,
     CadastroComponent,
+<<<<<<< HEAD
+=======
+    HomeComponent,
+>>>>>>> 026528bf6808c13a9dbe20ab604249d91901932d
     ProdutoComponent,
     ItemComponent,
     CadastarProdutoComponent,
     DeletarProdutoComponent,
     CategoriaComponent,
+<<<<<<< HEAD
     HomeComponent,
     AtualizarProdutoComponent
 
+=======
+    SobreComponent
+>>>>>>> 026528bf6808c13a9dbe20ab604249d91901932d
   ],
   imports: [
     BrowserModule,

@@ -23,11 +23,21 @@ export class ItemComponent implements OnInit {
 
   ngOnInit(){
     let id = this.route.snapshot.params['id']
+<<<<<<< HEAD
   if(environment.token ==''){
     /*this.router.navigate(['/login'])*/
   }
 
   this.findAllItem()
+=======
+
+    if(environment.token == ''){
+      this.router.navigate(['/login']);
+
+    }
+
+    this.findAllItem();
+>>>>>>> 026528bf6808c13a9dbe20ab604249d91901932d
 }
 
 findAllItem(){

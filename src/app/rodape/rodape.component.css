@@ -6,7 +6,7 @@ footer {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #1f201c;
+    background-color: var(--background-footer);
 }
 
 .blocoFooter {
@@ -18,7 +18,10 @@ footer {
 
 h2 {
     font-size: 1.2rem;
+    font-weight: 800;
+
     color: #f1f1f1;
+
 }
 
 footer p {

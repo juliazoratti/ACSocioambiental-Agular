@@ -10,8 +10,13 @@ import { produtoService } from '../service/produto.service';
   styleUrls: ['./cadastar-produto.component.css']
 })
 export class CadastarProdutoComponent implements OnInit {
+<<<<<<< HEAD
   item: Produto = new Produto()
   listaItens: Produto[]
+=======
+
+  item: Produto = new Produto()
+>>>>>>> 026528bf6808c13a9dbe20ab604249d91901932d
 
   constructor(
     private produtoS: produtoService,
@@ -34,6 +39,7 @@ export class CadastarProdutoComponent implements OnInit {
     })
   }
 
+<<<<<<< HEAD
   findAllItem(){
     this.produtoS.getAllProduto().subscribe((resp: Produto[]) => {
       this.listaItens = resp
@@ -44,6 +50,14 @@ export class CadastarProdutoComponent implements OnInit {
       alert('Produto cadastrado com sucesso!')
       this.findAllItem()
       this.item = new Produto()
+=======
+  atualizar(){
+    this.produtoS.putProduto(this.item).subscribe((resp: Produto) =>
+    {
+      this.item = resp
+      alert('Produto atualizado com sucesso')
+      this.router.navigate(['/item'])
+>>>>>>> 026528bf6808c13a9dbe20ab604249d91901932d
     })
   }
 
