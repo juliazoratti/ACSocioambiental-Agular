@@ -5,13 +5,13 @@ import { Produto } from '../model/Produto';
 import { produtoService } from '../service/produto.service';
 
 @Component({
-  selector: 'app-cadastar-produto',
-  templateUrl: './cadastar-produto.component.html',
-  styleUrls: ['./cadastar-produto.component.css']
+  selector: 'app-atualizar-produto',
+  templateUrl: './atualizar-produto.component.html',
+  styleUrls: ['./atualizar-produto.component.css']
 })
-export class CadastarProdutoComponent implements OnInit {
+export class AtualizarProdutoComponent implements OnInit {
+
   item: Produto = new Produto()
-  listaItens: Produto[]
 
   constructor(
     private produtoS: produtoService,
@@ -34,17 +34,14 @@ export class CadastarProdutoComponent implements OnInit {
     })
   }
 
-  findAllItem(){
-    this.produtoS.getAllProduto().subscribe((resp: Produto[]) => {
-      this.listaItens = resp
-    })
-  }
-  cadastrar(){
-    this.produtoS.postProduto(this.item).subscribe((resp: Produto) => {
-      alert('Produto cadastrado com sucesso!')
-      this.findAllItem()
-      this.item = new Produto()
+  atualizar(){
+    this.produtoS.putProduto(this.item).subscribe((resp: Produto) =>
+    {
+      this.item = resp
+      alert('Produto atualizado com sucesso')
+      this.router.navigate(['/item'])
     })
   }
 
 }
+

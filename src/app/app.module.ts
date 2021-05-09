@@ -9,16 +9,13 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
 import { ProdutoComponent } from './produto/produto.component';
 import { ItemComponent } from './item/item.component';
 import { CadastarProdutoComponent } from './cadastar-produto/cadastar-produto.component';
 import { DeletarProdutoComponent } from './deletar-produto/deletar-produto.component';
 import { CategoriaComponent } from './categoria/categoria.component';
-
-=======
 import { HomeComponent } from './home/home.component';
->>>>>>> 2131fcb7a9d18e8903eac1665bcbaf638d1cc408
+import { AtualizarProdutoComponent } from './atualizar-produto/atualizar-produto.component';
 
 @NgModule({
   declarations: [
@@ -27,15 +24,14 @@ import { HomeComponent } from './home/home.component';
     RodapeComponent,
     LoginComponent,
     CadastroComponent,
-<<<<<<< HEAD
     ProdutoComponent,
     ItemComponent,
     CadastarProdutoComponent,
     DeletarProdutoComponent,
-    CategoriaComponent
-=======
-    HomeComponent
->>>>>>> 2131fcb7a9d18e8903eac1665bcbaf638d1cc408
+    CategoriaComponent,
+    HomeComponent,
+    AtualizarProdutoComponent
+
   ],
   imports: [
     BrowserModule,
