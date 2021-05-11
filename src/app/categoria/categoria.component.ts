@@ -11,11 +11,11 @@ import { CategoriaService } from '../service/categoria.service';
 })
 export class CategoriaComponent implements OnInit {
   categoria: Categoria = new Categoria();
-  categoriaLista:Categoria[];
+  categoriaLista: Categoria[];
 
   constructor(
-    private router:Router,
-    private categoriaService:CategoriaService
+    private router: Router,
+    private categoriaService: CategoriaService
 
   ) { }
 
@@ -25,12 +25,24 @@ export class CategoriaComponent implements OnInit {
 
     }
 
+    this.findAll();
+
+  }
+
+  findAll(){
+    this.categoriaService.getAllCategoria().subscribe((resp:Categoria[])=>{
+      this.categoriaLista = resp;
+
+    })
   }
 
   salvar(){
     this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
       this.categoria = resp;
-      console.log('nome da categoria: ', this.categoria.nome);
+      this.findAll();
+
+      alert('Categoria cadastrada com sucesso!');
+      this.categoria = new Categoria();
 
     })
 
