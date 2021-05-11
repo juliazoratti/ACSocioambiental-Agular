@@ -11,8 +11,8 @@ import { produtoService } from '../service/produto.service';
 })
 export class DeletarProdutoComponent implements OnInit {
 
-  item: Produto = new Produto()
-  idItem: number
+  item: Produto = new Produto();
+  idItem: number;
 
   constructor(
     private produtoS: produtoService,
@@ -22,22 +22,27 @@ export class DeletarProdutoComponent implements OnInit {
 
   ngOnInit() {
     if(environment.token == ''){
-      this.router.navigate(['/login'])
-  }
-  this.idItem = this.route.snapshot.params['id']
-  this.findByIdItem(this.idItem)
+      this.router.navigate(['/login']);
+    }
+
+    this.idItem = this.route.snapshot.params['id'];
+    this.findByIdItem(this.idItem);
+
   }
 
   findByIdItem(id: number){
     this.produtoS.getByIdProduto(id).subscribe((resp: Produto)=>{
-      this.item = resp
+      this.item = resp;
+
     })
   }
 
   apagar(){
     this.produtoS.deleteProduto(this.idItem).subscribe(()=>{
-      alert('Produto apagado com sucesso!')
-      this.router.navigate(['/item'])
+      alert('Produto apagado com sucesso!');
+
+      this.router.navigate(['/produtos']);
+
     })
   }
 }

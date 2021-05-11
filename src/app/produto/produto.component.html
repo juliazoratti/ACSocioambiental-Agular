@@ -12,8 +12,8 @@
                 <p>{{item.preco}}</p>
             </div>
             <div class="botoe">
-              <button [routerLink]="['/produto-edit', item.id]">Editar</button>
-              <button>Apagar</button>
+              <button [routerLink]="['/produto-edit', item.id]" >Editar</button>
+              <button [routerLink]="['/deletar-produto', item.id]" >Apagar</button>
             </div>
         </div>
     </div>
