@@ -2,18 +2,14 @@
 <div class="container-produtos">
     <div class="produtos" *ngFor='let item of listaDeProdutos'>
         <div class="bloco">
-            <a routerLink="/item" class="img">
+            <a [routerLink]="['/comprar-item', item.id]" class="img">
                 <!-- VERIFICAR PQ A IMAGEM NAO ESTA SENDO INFORMADA NA TELA -->
-                <img src="https://hiperideal.vteximg.com.br/arquivos/ids/167745-1000-1000/80764.jpg?v=636615816415070000" alt="">
+                <img src="{{item.imagem}}" alt="">
             </a>
             <div class="dados">
                 <h2>{{item.nome}}</h2>
                 <h4>{{item.descricao}}</h4>
                 <p>{{item.preco}}</p>
-            </div>
-            <div class="botoe">
-              <button [routerLink]="['/produto-edit', item.id]" >Editar</button>
-              <button [routerLink]="['/deletar-produto', item.id]" >Apagar</button>
             </div>
         </div>
     </div>

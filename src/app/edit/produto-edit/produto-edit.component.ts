@@ -62,7 +62,7 @@ export class ProdutoEditComponent implements OnInit {
 
       alert('Postagem atualizada com sucesso!');
 
-      this.router.navigate(['/home']);
+      this.router.navigate(['/produtos']);
 
     })
 
