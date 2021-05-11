@@ -32,12 +32,12 @@ import { Produto } from "../model/Produto"
       return this.http.get<Produto>(`${this.url}/produtos/${nome}`,this.token)
     }
 
-    postProduto(item:Produto):Observable<Produto>{
+    postProduto(item: Produto):Observable<Produto>{
       return this.http.post<Produto>(`${this.url}/produtos`, item ,this.token)
     }
 
-    putProduto(item:Produto):Observable<Produto>{
-      return this.http.put<Produto>(`${this.url}/produtos`, item,this.token)
+    putProduto(item: Produto):Observable<Produto>{
+      return this.http.put<Produto>(`${this.url}/produtos`, item, this.token);
     }
 
     deleteProduto(id:number){

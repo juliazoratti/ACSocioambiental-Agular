@@ -11,6 +11,7 @@ import { ProdutoComponent } from './produto/produto.component';
 import { CadastarProdutoComponent } from './cadastar-produto/cadastar-produto.component';
 import { DeletarProdutoComponent } from './deletar-produto/deletar-produto.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'sobre', component: SobreComponent},
   {path: 'cadastar-produto/:id', component: CadastarProdutoComponent},
   {path: 'deletar-produto/:id', component: DeletarProdutoComponent},
-  {path: 'produtos', component: ProdutoComponent}
+  {path: 'produtos', component: ProdutoComponent},
+  {path: 'produto-edit/:id', component: ProdutoEditComponent}
 
 ];
 
