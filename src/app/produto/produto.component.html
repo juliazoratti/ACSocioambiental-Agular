@@ -1,22 +1,28 @@
-<button class="botao" data-toggle="modal" data-target="#novaPostagem">Novo Produto</button>
 <div class="container-produtos">
-    <div class="produtos" *ngFor='let item of listaDeProdutos'>
-        <div class="bloco">
+    <div class="banner">
+      <div class="overlay">
+        <h2>Nos ajude nessa jornada. Contribua!</h2>
+        <button class="botao" data-toggle="modal" data-target="#novaPostagem">Novo Produto</button>
+      </div>
+    </div>
+    <div class="produtos">
+        <div class="bloco" *ngFor='let item of listaDeProdutos'>
             <a [routerLink]="['/comprar-item', item.id]" class="img">
                 <!-- VERIFICAR PQ A IMAGEM NAO ESTA SENDO INFORMADA NA TELA -->
                 <img src="{{item.imagem}}" alt="">
             </a>
             <div class="dados">
+                <h5>{{item.categoria.nome}}</h5>
                 <h2>{{item.nome}}</h2>
                 <h4>{{item.descricao}}</h4>
-                <p>{{item.preco}}</p>
+                <p>R$ {{item.preco}}</p>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade texto" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
       <div class="modal-header">

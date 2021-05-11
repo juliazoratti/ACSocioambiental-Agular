@@ -20,7 +20,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'cadastro', component: CadastroComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'categoria',component: CategoriaComponent},
+  {path: 'categoria', component: CategoriaComponent},
   {path: 'item', component: ItemComponent},
   {path: 'sobre', component: SobreComponent},
   {path: 'cadastar-produto/:id', component: CadastarProdutoComponent},
