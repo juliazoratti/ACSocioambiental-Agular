@@ -11,25 +11,30 @@ import { CategoriaService } from '../service/categoria.service';
   styleUrls: ['./categoria.component.css']
 })
 export class CategoriaComponent implements OnInit {
-categoria: Categoria = new Categoria()
-categoriaLista:Categoria[]
+  categoria: Categoria = new Categoria();
+  categoriaLista:Categoria[];
 
   constructor(
     private router:Router,
     private categoriaService:CategoriaService
+
   ) { }
 
   ngOnInit(){
-    console.log(environment.token,'<==== ====== ==== token CATEGORIA!!!!00000000')
+    if(environment.token == '') {
+      this.router.navigate(['/login']);
+
+    }
 
   }
 
   salvar(){
-    this.categoriaService.postCategoria(this.categoria).subscribe((resp:Categoria)=>{
-      this.categoria = resp
-      console.log('nome da categoria: ', this.categoria.nome)
+    this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
+      this.categoria = resp;
+      console.log('nome da categoria: ', this.categoria.nome);
 
     })
+
   }
 
 }

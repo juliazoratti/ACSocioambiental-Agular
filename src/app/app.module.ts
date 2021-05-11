@@ -8,8 +8,15 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { SobreComponent } from './sobre/sobre.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { CategoriaComponent } from './categoria/categoria.component';
+import { ProdutoComponent } from './produto/produto.component';
+import { ItemComponent } from './item/item.component';
+import { CadastarProdutoComponent } from './cadastar-produto/cadastar-produto.component';
+import { DeletarProdutoComponent } from './deletar-produto/deletar-produto.component';
+
+import { SobreComponent } from './sobre/sobre.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +25,12 @@ import { FormsModule } from '@angular/forms';
     RodapeComponent,
     LoginComponent,
     CadastroComponent,
+    HomeComponent,
+    ProdutoComponent,
+    ItemComponent,
+    CadastarProdutoComponent,
+    DeletarProdutoComponent,
+    CategoriaComponent,
     SobreComponent
   ],
   imports: [
@@ -25,7 +38,6 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
