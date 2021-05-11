@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class CategoriaEditComponent implements OnInit {
 
-  categoria: Categoria = new Categoria()
+  categoria: Categoria = new Categoria();
   idCategoria: number;
 
     constructor(
@@ -40,7 +40,7 @@ export class CategoriaEditComponent implements OnInit {
     }
 
     atualizar(){
-      this.categoriaService.putCategoria(this.categoria).subscribe((resp:Categoria) => {
+      this.categoriaService.putCategoria(this.categoria).subscribe((resp: Categoria) => {
         this.categoria = resp;
 
         alert("Categoria atualizada");
