@@ -7,5 +7,5 @@ export class Produto{
     public imagem: string
     public preco: number
     public ativo: boolean
-    /*public categoria: Categoria*/
+    public categoria: Categoria
 }
