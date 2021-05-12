@@ -20,6 +20,9 @@ import { SobreComponent } from './sobre/sobre.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -37,13 +40,19 @@ import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.co
     SobreComponent,
     ProdutoEditComponent,
     CategoriaEditComponent,
-    DeleteCategoriaComponent
+    DeleteCategoriaComponent,
+    AlertasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    /* HABILITA O MODAL EM NOSSA APLICACAO, SE NAO SERA GERADO UM ERRO */
+    /* O ROOT E PQ ELE ATUA NA RAIS DO PROJETO */
+    ModalModule.forRoot(),
+    /* IMPORTA ESSE MODULA PARA PODER ORDERNAR OS ITENS NA APLICACAO (ORDER BY) */
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

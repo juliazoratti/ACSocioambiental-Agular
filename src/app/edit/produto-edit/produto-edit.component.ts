@@ -4,6 +4,7 @@ import { Categoria } from 'src/app/model/Categoria';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from 'src/app/model/Produto';
+import { AlertasService } from 'src/app/service/alertas.service';
 
 @Component({
   selector: 'app-produto-edit',
@@ -22,7 +23,8 @@ export class ProdutoEditComponent implements OnInit {
     private produtoService: produtoService,
     private categoriaService: CategoriaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas: AlertasService
 
   ) { }
 
@@ -60,7 +62,7 @@ export class ProdutoEditComponent implements OnInit {
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp;
 
-      alert('Postagem atualizada com sucesso!');
+      this.alertas.showAlertSuccess('Postagem atualizada com sucesso!');
 
       this.router.navigate(['/produtos']);
 
