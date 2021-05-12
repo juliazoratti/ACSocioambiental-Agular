@@ -20,6 +20,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { AlertaComponent } from './alerta/alerta.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.co
     SobreComponent,
     ProdutoEditComponent,
     CategoriaEditComponent,
-    DeleteCategoriaComponent
+    DeleteCategoriaComponent,
+    AlertaComponent
   ],
   imports: [
     BrowserModule,
