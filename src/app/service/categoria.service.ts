@@ -16,8 +16,13 @@ export class CategoriaService {
 
   url = environment.caminho + environment.port
 
-  token = {
+  /*token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
+  }*/
+
+  token = {
+    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token') || '')
+
   }
 
   getAllCategoria():Observable<Categoria[]>{

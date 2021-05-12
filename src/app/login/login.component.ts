@@ -34,6 +34,8 @@ export class LoginComponent implements OnInit {
   msgErro = <HTMLInputElement>window.document.querySelector('#msgErro');
   msgSucesso = window.document.querySelector('#msgSucesso');
 
+  token = this.userLogin.token;
+
   constructor(private auth:AuthService,
     private router:Router
 
@@ -102,14 +104,16 @@ export class LoginComponent implements OnInit {
       this.userLogin = resp
 
       environment.id = this.userLogin.id
-      environment.token = this.userLogin.token
+      //environment.token = this.userLogin.token
       environment.nome= this.userLogin.nome
       environment.usuario= this.userLogin.usuario
       environment.email= this.userLogin.email
       environment.foto=this.userLogin.foto
 
+      localStorage.setItem('token', this.userLogin.token);
+
       console.log(environment.id )
-      console.log(environment.token)
+      console.log(this.userLogin.token)
       console.log(environment.email)
       console.log(environment.nome)
       console.log(environment.usuario)

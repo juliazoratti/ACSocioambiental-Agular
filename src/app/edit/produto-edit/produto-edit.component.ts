@@ -29,6 +29,11 @@ export class ProdutoEditComponent implements OnInit {
   ngOnInit() {
     window.scroll(0, 0);
 
+    if(localStorage.getItem('token') == null) {
+      this.router.navigate(['/login']);
+
+    }
+
     this.idCategoria = this.route.snapshot.params['id'];
 
     this.findByIdProduto(this.idCategoria);

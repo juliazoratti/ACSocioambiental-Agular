@@ -16,8 +16,14 @@ import { Produto } from "../model/Produto"
     ) { }
 
     url = environment.caminho + environment.port
-    token = {
+
+    /*token = {
       headers: new HttpHeaders().set('Authorization', environment.token)
+    }*/
+
+    token = {
+      headers: new HttpHeaders().set('Authorization', localStorage.getItem('token') || '')
+
     }
 
     getAllProduto(): Observable<Produto[]>{

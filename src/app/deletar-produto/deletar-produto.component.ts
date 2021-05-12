@@ -21,8 +21,9 @@ export class DeletarProdutoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(environment.token == ''){
+    if(localStorage.getItem('token') == null) {
       this.router.navigate(['/login']);
+
     }
 
     this.idItem = this.route.snapshot.params['id'];

@@ -21,13 +21,18 @@ export class CadastarProdutoComponent implements OnInit {
 
   ngOnInit() {
     if(environment.token ==''){
-      this.router.navigate(['/login'])
-  }
-  let id = this.route.snapshot.params['id']
+      if(localStorage.getItem('token') == null) {
+        this.router.navigate(['/login']);
+
+      }
+
+    }
+
+    let id = this.route.snapshot.params['id']
     this.findByIdItem(id)
 
   }
-  
+
   findByIdItem(id: number){
     this.produtoS.getByIdProduto(id).subscribe((resp: Produto) =>{
       this.item = resp

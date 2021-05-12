@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     /* VERIFICA SE O VALOR CONTIDO DENTRO DO TOKEN NO VALOR GLOBAL E IGUAL A VAZIO/NULO */
     /* CASO SEJA, REDIRECIONA O USUARIO AO LOGIN */
-    if(environment.token == '') {
+    if(localStorage.getItem('token') == null) {
       /* ENVIA UMA MENSAGEM AO USUARIO */
       //alert('Sua sessao expirou, faca o login novamente!')
 

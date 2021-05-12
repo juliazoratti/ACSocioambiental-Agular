@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment.prod';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -8,9 +8,19 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+
+  ) { }
 
   ngOnInit() {
+
+  }
+
+  /* DESLOGA O USUARIO DA SESSAO */
+  sair() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']);
 
   }
 
