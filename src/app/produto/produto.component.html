@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="produtos">
-        <div class="bloco" *ngFor='let item of listaDeProdutos'>
+        <div class="bloco" *ngFor='let item of listaDeProdutos | orderBy: key : reverse'>
             <a [routerLink]="['/comprar-item', item.id]" class="img">
                 <!-- VERIFICAR PQ A IMAGEM NAO ESTA SENDO INFORMADA NA TELA -->
                 <img src="{{item.imagem}}" alt="">

@@ -22,6 +22,9 @@ export class ProdutoComponent implements OnInit {
   listaDeCategoria: Categoria[];
   idCategoria: number;
 
+  key = 'categoria';
+  reverse = false;
+
   constructor(
     private router: Router,
     private produtoService: produtoService,
