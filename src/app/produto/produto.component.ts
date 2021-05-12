@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { produtoService } from '../service/produto.service';
 
@@ -25,7 +26,8 @@ export class ProdutoComponent implements OnInit {
     private router: Router,
     private produtoService: produtoService,
     private route: ActivatedRoute,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private alertas: AlertasService
 
   ) { }
 
@@ -84,7 +86,7 @@ export class ProdutoComponent implements OnInit {
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp;
 
-      alert('Postagem realizada com sucesso!');
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!');
 
       /* INSTANCIA UM NOVO OBJETO POSTAGEM PARA LIMPAR OS CAMPOS */
       this.produto = new Produto();

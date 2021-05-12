@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { ProdutoComponent } from '../produto/produto.component';
 import { Produto } from "../model/Produto"
 import { produtoService } from '../service/produto.service';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-item',
@@ -18,7 +19,9 @@ export class ItemComponent implements OnInit {
   constructor(
     private router: Router,
     private produtoS: produtoService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas: AlertasService
+
   ) { }
 
   ngOnInit(){
@@ -52,7 +55,7 @@ cadastrar(){
     this.produtoS.postProduto(this.item).subscribe((resp: Produto) => {
       this.item = resp;
 
-      alert('Produto cadastrado com sucesso!')
+      this.alertas.showAlertSuccess('Produto cadastrado com sucesso!')
 
       this.findAllItem()
       this.item = new Produto()
