@@ -84,7 +84,6 @@ body {
 
 }
 
-<<<<<<< HEAD
 
 .iconMedia {
   width: 8%;
@@ -110,8 +109,7 @@ body {
   width: 20%;
   height: auto;
 }
-=======
->>>>>>> af947b594dbb00e3e7d461045a06f7d9cf3c4cd2
+
 .collapse ul {
   width: 80%;
   height: auto;
@@ -139,8 +137,5 @@ body {
 .collapse ul li a:hover {
   color: var(--icon) !important;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> af947b594dbb00e3e7d461045a06f7d9cf3c4cd2
 }

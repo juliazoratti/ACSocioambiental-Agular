@@ -32,24 +32,17 @@ export class ProdutoEditComponent implements OnInit {
   ngOnInit() {
     window.scroll(0, 0);
 
-<<<<<<< HEAD
 
     if(localStorage.getItem('token') == null) {
     }
 
+
     if(environment.token == '') {
 
-=======
-    if(environment.token == '') {
->>>>>>> af947b594dbb00e3e7d461045a06f7d9cf3c4cd2
       this.router.navigate(['/login']);
 
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> af947b594dbb00e3e7d461045a06f7d9cf3c4cd2
     /*if(localStorage.getItem('token') == null) {
       this.router.navigate(['/login']);
 
