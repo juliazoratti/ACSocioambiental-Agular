@@ -27,11 +27,6 @@ export class ItemComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    /*if(localStorage.getItem('token') == null) {
-      this.router.navigate(['/login']);
-
-    }*/
-
     if(environment.token == '') {
       this.router.navigate(['/login']);
 

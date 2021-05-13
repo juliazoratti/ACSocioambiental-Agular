@@ -22,7 +22,7 @@ export class CadastarProdutoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(environment.token ==''){
+    if(environment.token == ''){
         this.router.navigate(['/login']);
 
     }

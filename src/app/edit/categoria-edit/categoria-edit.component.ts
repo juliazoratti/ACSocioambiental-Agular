@@ -28,7 +28,7 @@ export class CategoriaEditComponent implements OnInit {
   /* SEMPRE QUE O COMPONENTE E CHAMADO, E EXECUTADO TUDO QUE ESTA AQUI DENTRO */
   ngOnInit() {
     /* REDIRECIONA O USUARIO PARA A TELA DE LOGIN, SEMPRE QUE O TOKEN NAO FOR IDENTIFICADO NA SESSAO */
-    if(localStorage.getItem('token') == null) {
+    if(environment.token == '') {
       this.router.navigate(['/login']);
 
     }

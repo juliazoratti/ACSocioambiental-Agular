@@ -24,7 +24,7 @@ export class DeletarProdutoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(localStorage.getItem('token') == null) {
+    if(environment.token == '') {
       this.router.navigate(['/login']);
 
     }

@@ -56,7 +56,7 @@
               <!-- O ATRIBUTO data-dismiss="modal", FAZ COM QUE O ITEM INFORMADO SEJA FINALIZADO POR COMPLETO -->
               <label class="texto-gray" for="texto">Escolha uma categoria ou <a class="texto-link" routerLink='/categoria' data-dismiss="modal">cadastre um novo</a>: </label>
               <!-- POR MEIO DA ESCOLHA DO USUARIO E PELO METODO (CHANGE) E CAPITURADO O ID DA OPCAO ESCOLHIDA PELO USUARIO -->
-              <select [(ngModel)]='idCategoria' class="form-control texto-input" name="tema" id="tema" (change)='findAllByCategoria()' >
+              <select [(ngModel)]='idCategoria' class="form-control texto-input" name="categoria" id="categoria" (change)='findAllByCategoria()' >
                   <!-- CRIA UM LOOP FOR PARA MOSTRAR TODAS AS OPCOES CONTIDAS DENTRO DA BADE DE DADOS DE TEMA -->
                   <!-- TRAZ O VALOR DO ID DE CADA TEMA E DEIXA-O ARMAZENDO DENTRO DO VALUE="id" -->
                   <option *ngFor='let item of listaDeCategoria' value="{{item.id}}">{{item.nome}}</option>

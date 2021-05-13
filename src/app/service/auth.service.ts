@@ -59,9 +59,7 @@ export class AuthService {
 
     if(environment.tipo == 'adm'){
       ok = true
-      console.log('acessou ok')
-    }else {
-      console.log('não acessou')
+
     }
 
     return ok

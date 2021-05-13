@@ -23,8 +23,8 @@ export class ProdutoComponent implements OnInit {
   listaDeCategoria: Categoria[];
   idCategoria: number;
 
-  key = 'categoria';
-  reverse = false;
+  key = 'data';
+  reverse = true;
 
   constructor(
     private router: Router,
@@ -39,7 +39,7 @@ export class ProdutoComponent implements OnInit {
   ngOnInit() {
     window.scroll(0, 0);
 
-    if(localStorage.getItem('token') == null) {
+    if(environment.token == '') {
       this.router.navigate(['/login']);
 
     }
@@ -75,6 +75,15 @@ export class ProdutoComponent implements OnInit {
   findAllByCategoria() {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaDeCategoria = resp;
+
+    })
+
+  }
+
+  /* TRAZ UM TEMA POR MEIO DO ID */
+  findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
+      this.categoria = resp;
 
     })
 
