@@ -42,6 +42,11 @@ export class ProdutoComponent implements OnInit {
 
     }
 
+    /*if(localStorage.getItem('token') == null) {
+      this.router.navigate(['/login']);
+
+    }*/
+
     this.idProduto = this.route.snapshot.params['id'];
 
     this.findAllByCategoria();

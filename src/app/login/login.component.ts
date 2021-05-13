@@ -34,6 +34,9 @@ export class LoginComponent implements OnInit {
   msgErro = <HTMLInputElement>window.document.querySelector('#msgErro');
   msgSucesso = window.document.querySelector('#msgSucesso');
 
+  /* ARMAZENA O TOKEN */
+  token = this.userLogin.token;
+
   constructor(private auth:AuthService,
     private router:Router
 
@@ -107,6 +110,9 @@ export class LoginComponent implements OnInit {
       environment.usuario= this.userLogin.usuario
       environment.email= this.userLogin.email
       environment.foto=this.userLogin.foto
+
+      /* INSITE O VALOR DO TOKEN NO LOCAL STORAGE DO BROWSER */
+      //localStorage.setItem('token', this.token);
 
       console.log(environment.id )
       console.log(environment.token)

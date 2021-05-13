@@ -27,6 +27,12 @@ export class DeleteCategoriaComponent implements OnInit {
     if(environment.token == '') {
       this.router.navigate(['/login']);
     }
+
+    /*if(localStorage.getItem('token') == null) {
+      this.router.navigate(['/login']);
+
+    }*/
+
     this.idCategoria = this.route.snapshot.params['id']
     this.findByIdCategoria(this.idCategoria)
   }

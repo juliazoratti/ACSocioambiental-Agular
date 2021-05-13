@@ -16,8 +16,10 @@ export class CategoriaService {
 
   url = environment.caminho + environment.port
 
+  /* LIBERA O ACESSO AS DEMAIS PAGINAS COM O TOKEN VINDO DO LOCAL STORAGE */
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
+    //headers: new HttpHeaders().set('Authorization', localStorage.getItem('token') || '')
   }
 
   getAllCategoria():Observable<Categoria[]>{

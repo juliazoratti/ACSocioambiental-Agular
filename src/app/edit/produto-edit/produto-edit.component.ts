@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment.prod';
 import { produtoService } from './../../service/produto.service';
 import { Component, OnInit } from '@angular/core';
 import { Categoria } from 'src/app/model/Categoria';
@@ -30,6 +31,16 @@ export class ProdutoEditComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0);
+
+    if(environment.token == '') {
+      this.router.navigate(['/login']);
+
+    }
+
+    /*if(localStorage.getItem('token') == null) {
+      this.router.navigate(['/login']);
+
+    }*/
 
     this.idCategoria = this.route.snapshot.params['id'];
 
