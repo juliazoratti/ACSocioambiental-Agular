@@ -1,4 +1,4 @@
-<div class="conainer-fluid">
+<!--<div class="conainer-fluid">
   <div class="row bg-secondary bg-fundo">
       <div class="col-md-12  text-white">
           <a routerLink='/inicio' class="text-white text-left"> <i class="fa fa-angle-double-left" aria-hidden="true"></i> Inicio</a>
@@ -31,8 +31,6 @@
   </div>
   <div class="row mt-3 mb-5 d-flex justify-content-center">
       <div class="col-md-6">
-
-          <!-- TABELA -->
           <table class="table table-striped">
               <thead>
                 <tr>
@@ -55,6 +53,59 @@
               </tbody>
             </table>
 
+      </div>
+  </div>
+</div>-->
+
+<!-- NOVO TESTE -->
+<div class="container texto">
+  <div class="row d-flex align-items-start justify-content-center">
+      <div class="col-md-5 texto">
+          <a routerLink='/home' class="texto rota-link">
+              <i class="bi bi-chevron-double-left"></i> Home
+          </a>
+          / Categoria
+          <h1 class="fs-54 texto texto-responsivo">Categoria</h1>
+          <h5 class="fs-18 texto texto-responsivo">Veja aqui todos as Categorias cadastradas ou cadastre uma nova!</h5>
+
+          <div class="row mt-4">
+              <div class="col-md-12">
+                  <div class="form-group resposividade-botao">
+                      <!-- VERIFICA SE OS DADOS INSERIDOS TEPO USUARIO, REALMENTE PERTENCEM A CLASSE TEMA -->
+                      <input [(ngModel)]='categoria.nome' type="text" class="form-control"  id="descricao" placeholder="Digite o nome de sua Categoria!">
+                      <!-- CHAMA A FUNCAO CRIADA cadastrar() DENTRO DA CLASSE, QUE TEM COMO FUNCAO, CADASTRAR O OBJETO TEMA -->
+                      <button class="botao margem-botao" (click)='salvar()' >Cadastrar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- LISTA DE TEMAS -->
+      <div class="col-md-7 texto d-flex justify-content-center flex-column">
+        <div class="row mt-3 d-flex justify-content-center">
+            <div class="col-md-12">
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Modificação</th>
+                      </tr>
+                    </thead>
+                    <tbody class="tr">
+                      <!-- CRIA UM LOOP PARA IMPRIMIR NA TELA TODOS OS DADOS CONTIDOS DENTRO DA listaTema ==> Resposavel por armazenar os dados vindos da tabela Tema -->
+                      <tr *ngFor='let x of categoriaLista'>
+                        <th>{{x.id}}</th>
+                        <td>{{x.descricao}}</td>
+                        <td class="d-flex justify-content-end">
+                          <button class="btn botao-editar mr-3" [routerLink]="['/categoria-edit', x.id]" >Editar</button>
+                          <button class="btn botao-apagar" [routerLink]="['/categoria-delete', x.id]">Apagar</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
       </div>
   </div>
 </div>
