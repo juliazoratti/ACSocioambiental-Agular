@@ -16,18 +16,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     /* VERIFICA SE O VALOR CONTIDO DENTRO DO TOKEN NO VALOR GLOBAL E IGUAL A VAZIO/NULO */
     /* CASO SEJA, REDIRECIONA O USUARIO AO LOGIN */
-<<<<<<< HEAD
-
-    if(localStorage.getItem('token') == null) {
-      /* ENVIA UMA MENSAGEM AO USUARIO */
-
     if(environment.token == '') {
       //ENVIA UMA MENSAGEM AO USUARIO
-
-=======
-    if(environment.token == '') {
-      //ENVIA UMA MENSAGEM AO USUARIO
->>>>>>> af947b594dbb00e3e7d461045a06f7d9cf3c4cd2
       //alert('Sua sessao expirou, faca o login novamente!')
 
       //REDIRECIONA O USUARIO A PAGINA DE LOGIN
@@ -44,4 +34,4 @@ export class HomeComponent implements OnInit {
 
 }
 
-}
+
