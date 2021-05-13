@@ -72,5 +72,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [x] Cadastrar, editar e excluir produtos
 - [x] Cadastrar, editar e excluir categorias
 - [x] Botões com acesso somente a usuários classificados como Administrador
+
+
 <a href="https://github.com/Danieloliver11/S.O.S-HUMANIDADE"><p align="center">ⒶⓟⒾ Repositório da parte de Back-end, feita com framework Spring Boot rest ⒶⓟⒾ</p></a>
 
