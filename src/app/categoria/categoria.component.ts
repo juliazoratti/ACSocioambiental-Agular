@@ -24,15 +24,10 @@ export class CategoriaComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    if(localStorage.getItem('token') == null) {
+    if(environment.token == '') {
       this.router.navigate(['/login']);
 
     }
-
-    /*if(localStorage.getItem('token') == null) {
-      this.router.navigate(['/login']);
-
-    }*/
 
     this.findAll();
 

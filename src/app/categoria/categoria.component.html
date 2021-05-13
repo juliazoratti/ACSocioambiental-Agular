@@ -58,7 +58,7 @@
 </div>-->
 
 <!-- NOVO TESTE -->
-<div class="container texto">
+<!--<div class="container texto">
   <div class="row d-flex align-items-start justify-content-center">
       <div class="col-md-5 texto">
           <a routerLink='/home' class="texto rota-link">
@@ -71,17 +71,15 @@
           <div class="row mt-4">
               <div class="col-md-12">
                   <div class="form-group resposividade-botao">
-                      <!-- VERIFICA SE OS DADOS INSERIDOS TEPO USUARIO, REALMENTE PERTENCEM A CLASSE TEMA -->
                       <input [(ngModel)]='categoria.nome' type="text" class="form-control"  id="descricao" placeholder="Digite o nome de sua Categoria!">
-                      <!-- CHAMA A FUNCAO CRIADA cadastrar() DENTRO DA CLASSE, QUE TEM COMO FUNCAO, CADASTRAR O OBJETO TEMA -->
                       <button class="botao margem-botao" (click)='salvar()' >Cadastrar</button>
                   </div>
               </div>
           </div>
-      </div>
+      </div>-->
 
       <!-- LISTA DE TEMAS -->
-      <div class="col-md-7 texto d-flex justify-content-center flex-column">
+      <!--<div class="col-md-7 texto d-flex justify-content-center flex-column">
         <div class="row mt-3 d-flex justify-content-center">
             <div class="col-md-12">
                 <table class="table table-hover">
@@ -93,7 +91,6 @@
                       </tr>
                     </thead>
                     <tbody class="tr">
-                      <!-- CRIA UM LOOP PARA IMPRIMIR NA TELA TODOS OS DADOS CONTIDOS DENTRO DA listaTema ==> Resposavel por armazenar os dados vindos da tabela Tema -->
                       <tr *ngFor='let x of categoriaLista'>
                         <th>{{x.id}}</th>
                         <td>{{x.descricao}}</td>
@@ -107,5 +104,62 @@
             </div>
         </div>
       </div>
-  </div>
+  </div>-->
+
+<div class="conainer-fluid">
+    <div class="row bg-secondary bg-fundo">
+        <div class="col-md-12 bg-light">
+            <h2 class="fs-54 pt-3  text-center">Categoria</h2>
+            <h6 class="pl-5 text-center">Veja aqui todos as categorias cadastradas ou cadastre uma nova!</h6>
+            <div class="row d-flex justify-content-center mt-5 mb-5">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <input [(ngModel)]='categoria.nome' type="text" class="form-control pl-3 pr-3" id="descricao" placeholder="Digite o nome de sua Categoria!">
+                    </div>
+                    <textarea class="pl-3 pr-3 ml-3" name="descricao" id="" cols="30" rows="10" placeholder='Coloque a Descrição de sua Categoria.' [(ngModel)]='categoria.descricao'></textarea>
+                    <div class="d-flex justify-content-center">
+                        <button (click)='salvar()' class="btn btn-light">Cadastrar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h2 class="text-center">Todas as Categorias</h2>
+        </div>
+    </div>
+    <div class="row mt-3 mb-5 d-flex justify-content-center">
+        <div class="col-md-6">
+
+            <!-- TABELA -->
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">modificações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let x of categoriaLista'>
+                        <th scope="row">{{x.id}}</th>
+                        <td>{{x.nome}}</td>
+                        <td>{{x.descricao}}</td>
+                        <td class="d-flex justify-content-center">
+                            <button class="btn btn-info mr-3" [routerLink]="['/categoria-edit', x.id]">Editar</button>
+                            <button class="btn btn-danger" [routerLink]="['/categoria-delete', x.id]">Apagar</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
 </div>
