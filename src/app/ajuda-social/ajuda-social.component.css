@@ -40,7 +40,6 @@
 .container-produtos .produtos .bloco .img img{
     width: 100%;
     height: auto;
-    
 
     -webkit-transition: -webkit-transform .3s ease-in-out;
     transition: transform, .3s ease-in-out;

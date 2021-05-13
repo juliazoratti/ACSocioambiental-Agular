@@ -14,6 +14,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { AjudaSocialComponent } from './ajuda-social/ajuda-social.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path: 'produto-edit/:id', component: ProdutoEditComponent},
   {path: 'comprar-item/:id', component: ItemComponent},
   {path: 'categoria-edit/:id', component: CategoriaEditComponent},
-  {path: 'categoria-delete/:id', component: DeleteCategoriaComponent}
+  {path: 'categoria-delete/:id', component: DeleteCategoriaComponent},
+  {path: 'ajuda-social', component: AjudaSocialComponent},
 
 ];
 
