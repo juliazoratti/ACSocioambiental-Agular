@@ -39,8 +39,8 @@
       <div class="img">
           <img src="{{item.imagem}}">
       </div>
-      <div class="botoes">
-        <button class="btn btn-info" [routerLink]="['/produto-edit', item.id]" >Editar</button>
+      <div *ngIf='auth.adm()' class="botoes">
+        <button class="btn btn-info" [routerLink]="['/produto-edit', item.id]">Editar</button>
         <button class="btn btn-danger" [routerLink]="['/deletar-produto', item.id]" >Apagar</button>
         <button class="btn btn-light" routerLink='/produtos'>Produtos</button>
       </div>
@@ -51,15 +51,17 @@
             {{item.nome}}
         </h2>
     </div>
+    
+    <div class="ml-5 mb-4 bd-highlight preco">
+      R$ {{item.preco}}
+  </div>
+    
     <div class="ml-5 mb-4 bd-highlight">
-        <h3>
+        <h3 class="descricao">
           {{item.descricao}}
         </h3>
     </div>
-    <div class="ml-5 mb-4 bd-highlight">
-        {{item.preco}}
-    </div>
 
-    <button type="button" class="ml-5 mb-4 btn btn-info botao" id='botao'>Adicionar ao carrinho</button>
+    <button type="button" class="ml-5 mb-4 btn botao" id='botao'>Adicionar ao carrinho</button>
   </div>
 </div>

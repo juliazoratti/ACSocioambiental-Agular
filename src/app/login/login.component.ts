@@ -110,12 +110,29 @@ export class LoginComponent implements OnInit {
       environment.usuario= this.userLogin.usuario
       environment.email= this.userLogin.email
       environment.foto=this.userLogin.foto
+      environment.tipo=this.userLogin.tipo
+
+
+      localStorage.setItem('token', this.userLogin.token);
+
+      /* INSITE O VALOR DO TOKEN NO LOCAL STORAGE DO BROWSER */
+      //localStorage.setItem('token', this.token);
+
+
+      /* INSITE O VALOR DO TOKEN NO LOCAL STORAGE DO BROWSER */
+      //localStorage.setItem('token', this.token);
+
+      /* INSITE O VALOR DO TOKEN NO LOCAL STORAGE DO BROWSER */
+      //localStorage.setItem('token', this.token);
+
+      /* INSITE O VALOR DO TOKEN NO LOCAL STORAGE DO BROWSER */
+      //localStorage.setItem('token', this.token);
 
       /* INSITE O VALOR DO TOKEN NO LOCAL STORAGE DO BROWSER */
       //localStorage.setItem('token', this.token);
 
       console.log(environment.id )
-      console.log(environment.token)
+      console.log(this.userLogin.token)
       console.log(environment.email)
       console.log(environment.nome)
       console.log(environment.usuario)

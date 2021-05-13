@@ -20,6 +20,16 @@
 
 }
 
+.descricao{
+  font-size: 20px;
+  color:rgb(138, 138, 138);
+}
+
+.preco{
+  font-size: 40px;
+  color:rgb(75, 75, 75);
+}
+
 .conteudo-produto .produto .img{
     overflow: hidden; /*para a imagem não aumentar inteira, continuar no limite que determinei*/
 
@@ -31,10 +41,11 @@
     width: 100%;
     height: auto;
 
+
 }
 
 .conteudo-produto .produto .img img{
-    width: 100%;
+    width: 500px;
     height: auto;
 
     -webkit-transition: -webkit-transform .5s ease;
@@ -52,6 +63,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 
 }
 
@@ -61,7 +73,9 @@
 }
 
 .conteudo-produto .botao {
-  width: 100%;
+  width: 300px;
   height: auto;
-
+  border-radius: 500px;
+  background-color:  var(--icon);
+  color: white;
 }
