@@ -16,15 +16,27 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     /* VERIFICA SE O VALOR CONTIDO DENTRO DO TOKEN NO VALOR GLOBAL E IGUAL A VAZIO/NULO */
     /* CASO SEJA, REDIRECIONA O USUARIO AO LOGIN */
+
     if(localStorage.getItem('token') == null) {
       /* ENVIA UMA MENSAGEM AO USUARIO */
+
+    if(environment.token == '') {
+      //ENVIA UMA MENSAGEM AO USUARIO
+
       //alert('Sua sessao expirou, faca o login novamente!')
 
-      /* REDIRECIONA O USUARIO A PAGINA DE LOGIN */
+      //REDIRECIONA O USUARIO A PAGINA DE LOGIN
       this.router.navigate(['/login'])
 
     }
 
+    /*if(localStorage.getItem('token') == null) {
+      this.router.navigate(['/login']);
+
+    }*/
+
   }
+
+}
 
 }

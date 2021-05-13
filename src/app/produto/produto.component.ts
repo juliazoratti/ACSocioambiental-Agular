@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { AlertasService } from '../service/alertas.service';
+import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { produtoService } from '../service/produto.service';
 
@@ -22,12 +23,16 @@ export class ProdutoComponent implements OnInit {
   listaDeCategoria: Categoria[];
   idCategoria: number;
 
+  key = 'categoria';
+  reverse = false;
+
   constructor(
     private router: Router,
     private produtoService: produtoService,
     private route: ActivatedRoute,
     private categoriaService: CategoriaService,
-    private alertas: AlertasService
+    private alertas: AlertasService,
+    public auth: AuthService
 
   ) { }
 
@@ -38,6 +43,11 @@ export class ProdutoComponent implements OnInit {
       this.router.navigate(['/login']);
 
     }
+
+    /*if(localStorage.getItem('token') == null) {
+      this.router.navigate(['/login']);
+
+    }*/
 
     this.idProduto = this.route.snapshot.params['id'];
 

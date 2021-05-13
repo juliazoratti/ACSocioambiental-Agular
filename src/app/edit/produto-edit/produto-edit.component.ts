@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment.prod';
 import { produtoService } from './../../service/produto.service';
 import { Component, OnInit } from '@angular/core';
 import { Categoria } from 'src/app/model/Categoria';
@@ -31,15 +32,26 @@ export class ProdutoEditComponent implements OnInit {
   ngOnInit() {
     window.scroll(0, 0);
 
+
     if(localStorage.getItem('token') == null) {
+    }
+
+    if(environment.token == '') {
+
       this.router.navigate(['/login']);
 
     }
 
+
+    /*if(localStorage.getItem('token') == null) {
+      this.router.navigate(['/login']);
+
+    }*/
+
     this.idCategoria = this.route.snapshot.params['id'];
 
     this.findByIdProduto(this.idCategoria);
-    this.findoByAllCategoria();
+    this.findByAllCategoria();
 
   }
 
@@ -51,7 +63,7 @@ export class ProdutoEditComponent implements OnInit {
 
   }
 
-  findoByAllCategoria() {
+  findByAllCategoria() {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaDeCategoria = resp;
 
@@ -60,7 +72,7 @@ export class ProdutoEditComponent implements OnInit {
   }
 
   /* ATUALIZA UMA POSTAGEM NA BASE DE DADOS */
-  atualizar() {
+  atualizar(){
     this.categoria.id = this.idCategoria;
     this.produto.categoria = this.categoria;
 
@@ -75,4 +87,5 @@ export class ProdutoEditComponent implements OnInit {
 
   }
 
-}
+  }
+

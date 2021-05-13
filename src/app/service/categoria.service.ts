@@ -16,12 +16,16 @@ export class CategoriaService {
 
   url = environment.caminho + environment.port
 
+
   /*token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }*/
 
+
+  /* LIBERA O ACESSO AS DEMAIS PAGINAS COM O TOKEN VINDO DO LOCAL STORAGE */
   token = {
-    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token') || '')
+    headers: new HttpHeaders().set('Authorization', environment.token)
+    //headers: new HttpHeaders().set('Authorization', localStorage.getItem('token') || '')
 
   }
 

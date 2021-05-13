@@ -4,7 +4,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse " id="conteudoNavbarSuportado">
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
         <div class="img">
             <img src="../../assets/img/logo.png" alt="">
         </div>
@@ -15,9 +15,9 @@
             <li class="nav-item">
                 <a class="nav-link" routerLink='/sobre' >Sobre nós</a>
             </li>
-            <li class="nav-item">
+            <!--<li class="nav-item">
                 <a class="nav-link" routerLink='/contatos' >Contato</a>
-            </li>
+            </li>-->
             <li class="nav-item">
                 <div class="dropdown">
                   <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -26,14 +26,15 @@
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" routerLink='/produtos' >Meio Ambiente</a>
                     <a class="dropdown-item" >Ajuda Social</a>
-                    <a class="dropdown-item" routerLink='/categoria' >Categorias</a>
+                    <a *ngIf='auth.adm()' class="dropdown-item" routerLink='/categoria' >Categorias</a>
                   </div>
                 </div>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <!--<form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+
         </form>
         <a (click)='sair()' class="iconMedia" href="#">Sair
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
@@ -41,5 +42,8 @@
             <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
           </svg>
         </a>
+=======
+        </form>-->
+
     </div>
 </nav>

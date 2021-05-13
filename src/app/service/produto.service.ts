@@ -23,7 +23,7 @@ import { Produto } from "../model/Produto"
 
     token = {
       headers: new HttpHeaders().set('Authorization', localStorage.getItem('token') || '')
-
+      //headers: new HttpHeaders().set('Authorization', localStorage.getItem('token') || '')
     }
 
     getAllProduto(): Observable<Produto[]>{
@@ -51,3 +51,4 @@ import { Produto } from "../model/Produto"
     }
 
   }
+

@@ -33,6 +33,11 @@ export class CategoriaEditComponent implements OnInit {
 
     }
 
+    /*if(localStorage.getItem('token') == null) {
+      this.router.navigate(['/login']);
+
+    }*/
+
     /* CAPITURA O PARAMENTRO DA URL E INSERE DETRO DO ATRIBUTO */
     let id = this.route.snapshot.params['id'];
     /* INSERE O VALOR COLETADO DA URL DENTRO DO METODO findByIdTema(id), QUE POR SUA VEZ RECEBE COMO PAREMTRO UM ID, DESSSA FORMA TRAZENDO OS DADOS DAQUELE ID EM ESPECIFICO */
