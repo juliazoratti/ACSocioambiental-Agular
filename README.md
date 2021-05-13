@@ -58,8 +58,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Java](https://www.java.com/pt-BR/)
 - [SpringBoot](https://start.spring.io/)
-- [HTML]
-- [CSS]
+- HTML
+- CSS
 - [JavaScript](https://www.java.com/pt-BR/)
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
