@@ -127,6 +127,9 @@ export class LoginComponent implements OnInit {
       /* INSITE O VALOR DO TOKEN NO LOCAL STORAGE DO BROWSER */
       //localStorage.setItem('token', this.token);
 
+      /* INSITE O VALOR DO TOKEN NO LOCAL STORAGE DO BROWSER */
+      //localStorage.setItem('token', this.token);
+
       console.log(environment.id )
       console.log(this.userLogin.token)
       console.log(environment.email)
