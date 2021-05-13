@@ -22,6 +22,7 @@ export class CadastarProdutoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+<<<<<<< HEAD
     if(environment.token ==''){
       if(localStorage.getItem('token') == null) {
         this.router.navigate(['/login']);
@@ -30,6 +31,8 @@ export class CadastarProdutoComponent implements OnInit {
 
     }
 
+=======
+>>>>>>> af947b594dbb00e3e7d461045a06f7d9cf3c4cd2
     if(environment.token == ''){
       this.router.navigate(['/login'])
     }
@@ -39,7 +42,10 @@ export class CadastarProdutoComponent implements OnInit {
 
     }*/
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> af947b594dbb00e3e7d461045a06f7d9cf3c4cd2
     let id = this.route.snapshot.params['id']
     this.findByIdItem(id)
 
