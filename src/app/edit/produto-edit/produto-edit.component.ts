@@ -45,7 +45,7 @@ export class ProdutoEditComponent implements OnInit {
     this.idCategoria = this.route.snapshot.params['id'];
 
     this.findByIdProduto(this.idCategoria);
-    this.findoByAllCategoria();
+    this.findByAllCategoria();
 
   }
 
@@ -57,7 +57,7 @@ export class ProdutoEditComponent implements OnInit {
 
   }
 
-  findoByAllCategoria() {
+  findByAllCategoria() {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaDeCategoria = resp;
 
@@ -66,7 +66,7 @@ export class ProdutoEditComponent implements OnInit {
   }
 
   /* ATUALIZA UMA POSTAGEM NA BASE DE DADOS */
-  atualizar() {
+  atualizar(){
     this.categoria.id = this.idCategoria;
     this.produto.categoria = this.categoria;
 
@@ -81,4 +81,5 @@ export class ProdutoEditComponent implements OnInit {
 
   }
 
-}
+  }
+

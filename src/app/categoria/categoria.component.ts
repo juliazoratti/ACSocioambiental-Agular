@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { AlertasService } from '../service/alertas.service';
+import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 
 @Component({
@@ -17,12 +18,13 @@ export class CategoriaComponent implements OnInit {
   constructor(
     private router: Router,
     private categoriaService: CategoriaService,
-    private alertas: AlertasService
+    private alertas: AlertasService,
+    public auth: AuthService
 
   ) { }
 
   ngOnInit(){
-    if(environment.token == '') {
+    if(localStorage.getItem('token') == null) {
       this.router.navigate(['/login']);
 
     }

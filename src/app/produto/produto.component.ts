@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { AlertasService } from '../service/alertas.service';
+import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { produtoService } from '../service/produto.service';
 
@@ -30,14 +31,15 @@ export class ProdutoComponent implements OnInit {
     private produtoService: produtoService,
     private route: ActivatedRoute,
     private categoriaService: CategoriaService,
-    private alertas: AlertasService
+    private alertas: AlertasService,
+    public auth: AuthService
 
   ) { }
 
   ngOnInit() {
     window.scroll(0, 0);
 
-    if(environment.token == '') {
+    if(localStorage.getItem('token') == null) {
       this.router.navigate(['/login']);
 
     }

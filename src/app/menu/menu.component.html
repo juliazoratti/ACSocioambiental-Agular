@@ -26,14 +26,10 @@
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" routerLink='/produtos' >Meio Ambiente</a>
                     <a class="dropdown-item" >Ajuda Social</a>
-                    <a class="dropdown-item" routerLink='/categoria' >Categorias</a>
+                    <a *ngIf='auth.adm()' class="dropdown-item" routerLink='/categoria' >Categorias</a>
                   </div>
                 </div>
             </li>
         </ul>
-        <!--<form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-        </form>-->
     </div>
 </nav>
