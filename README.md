@@ -52,5 +52,25 @@ Esse é um projeto que tem a intenção de causar impacto social e gerar conscie
 Acreditamos que juntos podemos mais e em conjunto podemos garantir um mundo mais sustentável e saudável para todos.
 </p>
 
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Java](https://www.java.com/pt-BR/)
+- [SpringBoot](https://start.spring.io/)
+- [HTML]
+- [CSS]
+- [JavaScript](https://www.java.com/pt-BR/)
+- [Node.js](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Bootstrap](https://getbootstrap.com/)
+
+### Features
+
+- [x] Cadastro e login de usuário
+- [x] Cadastro e login de cliente
+- [x] Cadastrar, editar e excluir produtos
+- [x] Cadastrar, editar e excluir categorias
+- [x] Botões com acesso somente a usuários classificados como Administrador
 <a href="https://github.com/Danieloliver11/S.O.S-HUMANIDADE"><p align="center">ⒶⓟⒾ Repositório da parte de Back-end, feita com framework Spring Boot rest ⒶⓟⒾ</p></a>
 
